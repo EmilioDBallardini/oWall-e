@@ -19,12 +19,11 @@ public class World : MonoBehaviour
         currentCharacter = characters[0];
         GameObject.Find("Main Camera").GetComponent<AutoCam>().myTarget = GameObject.Find("CenterOfCameraWalle").GetComponent<Transform>();
         GameObject.Find("CenterOfCameraEva").GetComponent<Transform>().rotation = characters[1].transform.rotation;
-        GameObject.Find("CenterOfCameraWalle").GetComponent<Transform>().rotation = characters[0].transform.rotation;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             charactersIndex++;
             if (!pressed)
